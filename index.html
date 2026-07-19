@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bisessar Sailesh — Web Developer</title>
+<meta name="description" content="Portfolio van Bisessar Sailesh, full-stack web developer. Bekijk mijn projecten, vaardigheden en ervaring in webontwikkeling.">
+<link rel="canonical" href="https://jouwdomein.nl/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bisessar Sailesh — Web Developer">
+<meta property="og:description" content="Portfolio van Bisessar Sailesh, full-stack web developer. Bekijk mijn projecten, vaardigheden en ervaring in webontwikkeling.">
+<meta property="og:image" content="img/profile.jpg">
+<meta property="og:url" content="https://jouwdomein.nl/index.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- AI Intro Overlay -->
+<div id="ai-overlay">
+  <div class="ai-intro-layout">
+    <div class="ai-intro-left">
+      <div class="sound-wave" id="soundWave"></div>
+      <div id="ai-text"></div>
+      <button id="skip-btn">Overslaan ↗</button>
+    </div>
+    <div class="ai-intro-right">
+      <div class="ai-avatar-ring">
+        <div class="ai-avatar-face"><img src="img/profile-old.png" alt="Bisessar Sailesh" class="avatar-face-img"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Navigation -->
+<nav>
+  <a class="nav-logo" href="index.html"><img src="img/logo.png" alt="Logo" class="logo-img"></a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Menu openen">☰</button>
+  <ul class="nav-links">
+    <li><a class="nav-btn nav-btn-home active" href="index.html">Home</a></li>
+    <li><a class="nav-btn nav-btn-about" href="about.html">Over mij</a></li>
+    <li><a class="nav-btn nav-btn-projects" href="work.html">Projecten</a></li>
+    <li><a class="nav-btn nav-btn-contact" href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════ HOME PAGE ══════════ -->
+<section class="page" id="home">
+  <div class="home-layout">
+    <div class="home-text">
+      <h1 class="hero-name">Welkom op mijn portfolio!</h1>
+      <p class="hero-role">Full-Stack <span>Web Developer</span> · UI/UX Enthusiast</p>
+      <p class="hero-intro">Ik zet creatieve ideeën om in moderne, gebruiksvriendelijke webapplicaties — en blijf mezelf voortdurend ontwikkelen.</p>
+
+      <div class="cta-row">
+        <a class="btn btn-primary btn-bounce" href="work.html">Bekijk Projecten →</a>
+        <a class="btn btn-outline btn-bounce" href="contact.html">Neem Contact Op</a>
+      </div>
+    </div>
+
+    <div class="home-photo">
+      <a class="profile-photo-wrap" href="about.html" aria-label="Ga naar Over mij">
+        <img src="img/profile.jpg" alt="Bisessar Sailesh">
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ WIE IK BEN & WAT IK DOE ══════════ -->
+<section class="home-summary">
+  <h2 class="home-section-title">Wie ik ben &amp; wat ik doe</h2>
+  <div class="summary-grid">
+    <div class="summary-card js-info-card" data-emoji="💻" data-title="Full-Stack Development" data-img="img/summary/full-stack-development.jpg" data-desc="Gepassioneerd door het bouwen van moderne, gebruiksvriendelijke en innovatieve webapplicaties — van creatief idee tot werkende oplossing.">
+      <div class="summary-card-icon"><img src="img/summary/full-stack-development.jpg" alt="Full-Stack Development"></div>
+      <h3>Full-Stack Development</h3>
+      <p>Gepassioneerd door het bouwen van moderne, gebruiksvriendelijke en innovatieve webapplicaties — van creatief idee tot werkende oplossing.</p>
+    </div>
+
+    <div class="summary-card js-info-card" data-emoji="🛡️" data-title="ICT-afdeling, Korps Politie Suriname" data-img="img/summary/huidige-functie.jpg" data-desc="Huidige functie. Ondersteuning van gebruikers, testen van applicaties, oplossen van technische problemen en beheer van ICT-systemen. Daarnaast verzorg ik trainingen voor collega's.">
+      <div class="summary-card-icon"><img src="img/summary/huidige-functie.jpg" alt="Huidige functie"></div>
+      <span class="period">Huidige functie</span>
+      <h3>ICT-afdeling, Korps Politie Suriname</h3>
+      <p>Ondersteuning van gebruikers, testen van applicaties, oplossen van technische problemen en beheer van ICT-systemen. Daarnaast verzorg ik trainingen voor collega's.</p>
+    </div>
+
+    <div class="summary-card js-info-card" data-emoji="🔧" data-title="Brede technische ervaring" data-img="img/summary/brede-technische-ervaring.jpg" data-desc="Softwareontwikkeling, netwerkondersteuning, hardwareonderhoud en technische support — een combinatie die betrouwbare en veilige oplossingen mogelijk maakt.">
+      <div class="summary-card-icon"><img src="img/summary/brede-technische-ervaring.jpg" alt="Brede technische ervaring"></div>
+      <h3>Brede technische ervaring</h3>
+      <p>Softwareontwikkeling, netwerkondersteuning, hardwareonderhoud en technische support — een combinatie die betrouwbare en veilige oplossingen mogelijk maakt.</p>
+    </div>
+
+    <div class="summary-card js-info-card" data-emoji="🏋️" data-title="Uitgelicht project: FitTracker" data-img="img/summary/fittracker.jpg" data-desc="Een webapplicatie waarmee gebruikers hun fitnessactiviteiten en voortgang kunnen beheren — een mooie mix van front-end en back-end development.">
+      <div class="summary-card-icon"><img src="img/summary/fittracker.jpg" alt="Uitgelicht project: FitTracker"></div>
+      <h3>Uitgelicht project: FitTracker</h3>
+      <p>Een webapplicatie waarmee gebruikers hun fitnessactiviteiten en voortgang kunnen beheren — een mooie mix van front-end en back-end development.</p>
+      <a class="card-link js-stop-propagation" href="work.html">Bekijk projecten →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ VAARDIGHEDEN ══════════ -->
+<section class="home-summary">
+  <h2 class="home-section-title">Mijn vaardigheden</h2>
+  <div class="home-skills-grow">
+    <span class="skill-pill skill-color-1 js-info-card" data-emoji="🧩" data-title="Full-Stack Web Development" data-img="img/summary/full-stack-development.jpg" data-desc="Ik ontwikkel complete webapplicaties, van front-end interface tot back-end logica en database — zodat ik een project volledig zelfstandig kan opzetten en bouwen.">Full-Stack Web Development</span>
+    <span class="skill-pill skill-color-2 js-info-card" data-emoji="🎨" data-title="HTML5, CSS3 & JavaScript" data-img="img/summary/full-stack-development.jpg" data-desc="De basisbouwstenen van elke website: HTML voor structuur, CSS voor vormgeving en JavaScript om alles interactief en dynamisch te maken.">HTML5, CSS3 & JavaScript</span>
+    <span class="skill-pill skill-color-3 js-info-card" data-emoji="📱" data-title="Responsive Web Design" data-img="img/interests/webontwikkeling.jpg" data-desc="Ik bouw websites die er op elk apparaat goed uitzien en prettig werken, van desktop tot tablet en smartphone.">Responsive Web Design</span>
+    <span class="skill-pill skill-color-4 js-info-card" data-emoji="🖌️" data-title="UI/UX Design" data-img="img/interests/ui-ux-design.jpg" data-desc="Ik ontwerp interfaces die niet alleen mooi zijn, maar ook intuïtief aanvoelen, met aandacht voor gebruiksvriendelijkheid en gebruikerservaring.">UI/UX Design</span>
+    <span class="skill-pill skill-color-5 js-info-card" data-emoji="🧠" data-title="Problem Solving" data-img="img/interests/problemen-oplossen.jpg" data-desc="Ik analyseer technische vraagstukken stap voor stap en kom tot praktische, werkende oplossingen — zowel in code als in ICT-vraagstukken.">Problem Solving</span>
+    <span class="skill-pill skill-color-6 js-info-card" data-emoji="🔧" data-title="Git & Version Control" data-img="img/interests/webontwikkeling.jpg" data-desc="Ik beheer mijn code met Git en platforms zoals GitHub, zodat ik veilig kan samenwerken, wijzigingen kan bijhouden en eerdere versies kan terughalen.">Git & Version Control</span>
+    <span class="skill-pill skill-color-7 js-info-card" data-emoji="🧪" data-title="Applicatieontwikkeling en Testing" data-img="img/summary/fittracker.jpg" data-desc="Van het bouwen van applicaties tot het grondig testen ervan — ik zorg dat software betrouwbaar werkt voordat deze in gebruik wordt genomen.">Applicatieontwikkeling en Testing</span>
+    <span class="skill-pill skill-color-8 js-info-card" data-emoji="🌐" data-title="Netwerk- en ICT-ondersteuning" data-img="img/summary/huidige-functie.jpg" data-desc="Ik ondersteun gebruikers en beheer netwerken en ICT-systemen, met ervaring opgedaan bij het Korps Politie Suriname.">Netwerk- en ICT-ondersteuning</span>
+    <span class="skill-pill skill-color-9 js-info-card" data-emoji="🛠️" data-title="Hardware & Software Troubleshooting" data-img="img/summary/brede-technische-ervaring.jpg" data-desc="Ik los technische problemen op aan zowel hardware- als softwarekant, met een gestructureerde aanpak om storingen snel te verhelpen.">Hardware & Software Troubleshooting</span>
+    <span class="skill-pill skill-color-10 js-info-card" data-emoji="🤝" data-title="Teamwork en Communicatie" data-img="img/interests/blijven-leren.jpg" data-desc="Ik werk graag samen in teams, deel kennis met collega's en verzorg trainingen — goede communicatie vind ik net zo belangrijk als technische kennis.">Teamwork en Communicatie</span>
+  </div>
+</section>
+
+<!-- ══════════ AFSLUITER ══════════ -->
+<section class="home-summary home-closing">
+  <p class="home-closing-text">Ik ben altijd op zoek naar nieuwe uitdagingen waarin ik mijn technische kennis kan uitbreiden, innovatieve oplossingen kan ontwikkelen en een waardevolle bijdrage kan leveren aan succesvolle projecten.</p>
+</section>
+
+<!-- Info Modal (vakjes & vaardigheden) -->
+<div id="info-modal">
+  <div class="modal-box photo-modal-box">
+    <button class="modal-close js-close-info-modal">✕</button>
+    <div class="photo-modal-img" id="im-img-wrap"><img id="im-img" src="" alt=""></div>
+    <div class="modal-emoji" id="im-emoji"></div>
+    <div class="modal-title" id="im-title"></div>
+    <div class="modal-desc" id="im-desc"></div>
+    <div class="modal-btns">
+      <button class="btn btn-outline js-close-info-modal">Sluiten</button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div>Created by Sailesh Bisessar</div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

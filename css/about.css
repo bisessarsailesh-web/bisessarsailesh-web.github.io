@@ -1,0 +1,78 @@
+/* ── OVER MIJ — paarse/roze achtergrond ── */
+html, body {
+  background: linear-gradient(140deg, #ff00c8 0%, #4b006e 45%, #0a0014 100%);
+}
+#about {
+  padding:6rem 2rem 4rem;
+  background: linear-gradient(140deg, #ff00c8 0%, #4b006e 45%, #0a0014 100%);
+}
+
+.about-container { max-width:1300px; margin:0 auto; }
+
+/* Intro block */
+.about-block {
+  display:flex; align-items:center; gap:3.5rem;
+  margin-bottom:1rem;
+}
+.about-photo {
+  flex:0 0 420px; width:420px; height:520px;
+  border-radius:24px; overflow:hidden;
+  border:1px solid var(--border);
+  box-shadow:0 0 40px rgba(79,195,247,.12);
+}
+.about-photo img { width:100%; height:100%; object-fit:cover; display:block; }
+.about-text { flex:1; }
+.about-text h3 {
+  font-family:'Space Grotesk',sans-serif; font-size:1.9rem; font-weight:700;
+  margin-bottom:1.2rem; letter-spacing:-.01em;
+  background:linear-gradient(135deg,#fff 20%,var(--accent) 70%);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+}
+.about-text p {
+  font-size:1.2rem; color:var(--text-muted); line-height:1.9; margin-bottom:1.1rem;
+}
+
+/* Grotere tekst door de hele Over mij-pagina */
+#about .section-eyebrow { font-size:1rem; }
+#about .timeline-role { font-size:1.75rem; }
+#about .timeline-company { font-size:1.2rem; }
+#about .timeline-desc { font-size:1.2rem; line-height:1.9; }
+#about .timeline-period { font-size:.95rem; }
+#about .interest-card h4 { font-size:1.2rem; }
+#about .interest-card p { font-size:1rem; }
+#about .skill-bar-label { font-size:1rem; }
+.skills-eyebrow-spacing { margin-bottom:1.5rem; }
+#about .skills-strip .skill-pill { font-size:1rem; }
+
+@media(max-width:820px){
+  .about-block { flex-direction:column; text-align:center; }
+  .about-photo { flex:none; width:280px; height:340px; }
+}
+
+/* Interests */
+.interests-grid {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:1.4rem;
+}
+.interest-card {
+  background:linear-gradient(145deg,#0d1b3e,#060912);
+  border:1px solid var(--border); border-radius:16px;
+  overflow:hidden; text-align:center; transition:.3s; cursor:pointer;
+}
+.interest-card:hover { border-color:var(--accent); transform:translateY(-4px); box-shadow:0 0 30px rgba(79,195,247,.12); }
+.interest-photo { width:100%; height:150px; overflow:hidden; background:#050a14; }
+.interest-photo img { width:100%; height:100%; object-fit:cover; display:block; transition:.4s; }
+.interest-card:hover .interest-photo img { transform:scale(1.08); }
+.interest-card-body { padding:1.4rem 1.4rem 1.8rem; }
+.interest-card h4 { font-family:'Space Grotesk',sans-serif; font-size:1.05rem; font-weight:700; margin-bottom:.5rem; }
+.interest-card p { font-size:.88rem; color:var(--text-muted); line-height:1.6; }
+
+/* CTA */
+.about-cta {
+  display:flex; gap:1.2rem; flex-wrap:wrap; justify-content:center;
+  margin-top:4.5rem;
+}
+
+/* ── Werkervaring & Skills (voorheen ervaring.css) ── */
+/* Hergebruikt dezelfde paarse/roze achtergrond van #about hierboven,
+   zodat de hele Over mij-pagina (incl. ervaring & skills) er visueel als één geheel uitziet. */

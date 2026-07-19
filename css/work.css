@@ -1,0 +1,38 @@
+/* ── PROJECTEN — blauwe achtergrond ── */
+html, body {
+  background: linear-gradient(160deg, #1a1aff 0%, #0000aa 40%, #00000f 100%);
+}
+
+#projects {
+  padding:6rem 2rem 4rem;
+  background: linear-gradient(160deg, #1a1aff 0%, #0000aa 40%, #00000f 100%);
+}
+
+.projects-grid {
+  max-width: 1300px !important;
+  grid-template-columns: 1fr !important;
+}
+.project-card .card-img { height:260px; font-size:5.5rem; }
+.project-card .card-body { padding:2.5rem 3rem; }
+.project-card .card-title { font-size:2rem; }
+.project-card .card-desc { font-size:1.15rem; max-width:900px; }
+.project-card .card-tags .tag { font-size:.9rem; padding:.4rem 1rem; }
+.project-card .card-link { font-size:1.05rem; }
+
+.card-actions {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  #projects { padding: 4.5rem 1.2rem 3rem; }
+  .project-card .card-body { padding: 1.5rem 1.5rem; }
+  .project-card .card-title { font-size: 1.5rem; }
+  .project-card .card-desc { font-size: 1rem; max-width: 100%; }
+  .project-card .card-img { height: 180px; font-size: 3.5rem; }
+}
+
+@media (max-width: 480px) {
+  .card-actions { flex-direction: column; gap: 0.6rem; }
+}

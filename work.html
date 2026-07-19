@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projecten — Bisessar Sailesh</title>
+<meta name="description" content="Bekijk de projecten van Bisessar Sailesh, waaronder FitTracker: een full-stack fitness webapplicatie gebouwd met Node.js, Express.js en Prisma ORM.">
+<link rel="canonical" href="https://jouwdomein.nl/work.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Projecten — Bisessar Sailesh">
+<meta property="og:description" content="Bekijk de projecten van Bisessar Sailesh, waaronder FitTracker: een full-stack fitness webapplicatie.">
+<meta property="og:image" content="img/projects/project-1.jpg">
+<meta property="og:url" content="https://jouwdomein.nl/work.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/work.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a class="nav-logo" href="index.html"><img src="img/logo.png" alt="Logo" class="logo-img"></a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Menu openen">☰</button>
+  <ul class="nav-links">
+    <li><a class="nav-btn nav-btn-home" href="index.html">Home</a></li>
+    <li><a class="nav-btn nav-btn-about" href="about.html">Over mij</a></li>
+    <li><a class="nav-btn nav-btn-projects active" href="work.html">Projecten</a></li>
+    <li><a class="nav-btn nav-btn-contact" href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════ PROJECTEN PAGE ══════════ -->
+<section class="page" id="projects">
+  <div class="section-header">
+    <h1 class="section-title">Projecten</h1>
+    <div class="glow-line"></div>
+  </div>
+
+  <div class="projects-grid">
+    <div class="project-card js-open-project" data-project-index="0">
+      <div class="card-img"><img src="img/projects/project-1.jpg" alt="FitTracker preview" class="img-cover-fill"></div>
+      <div class="card-body">
+        <div class="card-tags"><span class="tag">Schoolproject</span><span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">Prisma ORM</span></div>
+        <div class="card-title">FitTracker — Fitness Webapplicatie</div>
+        <div class="card-desc">Full-stack fitness webapp met workoutplanner, oefeningendatabase en automatische trainingsgenerator.</div>
+        <div class="card-actions">
+          <a class="card-link js-stop-propagation">Details bekijken →</a>
+          <a class="card-link js-stop-propagation" href="https://github.com/bisessarsailesh-web/fittracker" target="_blank">Bekijk op GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Project Modal -->
+<div id="project-modal">
+  <div class="modal-box">
+    <button class="modal-close js-close-project-modal">✕</button>
+    <div class="modal-img" id="m-img"><img src="" alt="" id="m-img-el"></div>
+    <div class="modal-emoji" id="m-emoji"></div>
+    <div class="modal-title" id="m-title"></div>
+    <div class="modal-tags" id="m-tags"></div>
+    <div class="modal-desc" id="m-desc"></div>
+    <div class="modal-features">
+      <h4>Functies</h4>
+      <ul id="m-features"></ul>
+    </div>
+    <div class="modal-features">
+      <h4>Wat ik heb geleerd</h4>
+      <p id="m-learned" class="modal-desc no-margin-bottom"></p>
+    </div>
+    <div class="modal-btns">
+      <a class="btn btn-primary" id="m-link" href="#" target="_blank">Bekijk op GitHub ↗</a>
+      <button class="btn btn-outline js-close-project-modal">Sluiten</button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div>Created by Sailesh Bisessar</div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/work.js"></script>
+</body>
+</html>

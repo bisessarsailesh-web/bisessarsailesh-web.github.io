@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Bisessar Sailesh</title>
+<meta name="description" content="Neem contact op met Bisessar Sailesh via e-mail, GitHub, WhatsApp of telefoon voor vragen of samenwerking.">
+<link rel="canonical" href="https://jouwdomein.nl/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact — Bisessar Sailesh">
+<meta property="og:description" content="Neem contact op met Bisessar Sailesh voor vragen of samenwerking.">
+<meta property="og:image" content="img/profile.jpg">
+<meta property="og:url" content="https://jouwdomein.nl/contact.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a class="nav-logo" href="index.html"><img src="img/logo.png" alt="Logo" class="logo-img"></a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Menu openen">☰</button>
+  <ul class="nav-links">
+    <li><a class="nav-btn nav-btn-home" href="index.html">Home</a></li>
+    <li><a class="nav-btn nav-btn-about" href="about.html">Over mij</a></li>
+    <li><a class="nav-btn nav-btn-projects" href="work.html">Projecten</a></li>
+    <li><a class="nav-btn nav-btn-contact active" href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════ CONTACT PAGE ══════════ -->
+<section class="page" id="contact">
+  <div class="section-header">
+    <h1 class="section-title">Contact</h1>
+    <div class="glow-line"></div>
+  </div>
+
+  <div class="contact-layout">
+    <div class="contact-container">
+      <div class="contact-grid">
+        <div class="contact-card js-open-contact"
+             data-img="img/contact/email.png" data-label="Email" data-value="bisessarsailesh@gmail.com"
+             data-link="mailto:bisessarsailesh@gmail.com" data-linktext="Verstuur e-mail →">
+          <div class="contact-icon"><img src="img/contact/email.png" alt="Email"></div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">bisessarsailesh@gmail.com</div>
+          </div>
+        </div>
+
+        <div class="contact-card js-open-contact"
+             data-img="img/contact/telefoon.jpg" data-label="Telefoon" data-value="+597 856 3464"
+             data-link="tel:+5978563464" data-linktext="Bel nu →">
+          <div class="contact-icon"><img src="img/contact/telefoon.jpg" alt="Telefoon"></div>
+          <div>
+            <div class="contact-label">Telefoon</div>
+            <div class="contact-value">+597 856 3464</div>
+          </div>
+        </div>
+
+        <div class="contact-card js-open-contact"
+             data-img="img/contact/whatsapp.jpg" data-label="WhatsApp" data-value="+597 856 3464"
+             data-link="https://wa.me/5978563464" data-linktext="Stuur bericht →">
+          <div class="contact-icon"><img src="img/contact/whatsapp.jpg" alt="WhatsApp"></div>
+          <div>
+            <div class="contact-label">WhatsApp</div>
+            <div class="contact-value">+597 856 3464</div>
+          </div>
+        </div>
+
+        <div class="contact-card js-open-contact"
+             data-img="img/contact/facebook.jpg" data-label="Facebook" data-value="Vishaal Bisessar"
+             data-link="https://www.facebook.com/vishaal.bisessar" data-linktext="Bekijk profiel →">
+          <div class="contact-icon"><img src="img/contact/facebook.jpg" alt="Facebook"></div>
+          <div>
+            <div class="contact-label">Facebook</div>
+            <div class="contact-value">Vishaal Bisessar</div>
+          </div>
+        </div>
+
+        <div class="contact-card js-open-contact"
+             data-img="img/contact/github.png" data-label="GitHub" data-value="github.com/bisessarsailesh-web"
+             data-link="https://github.com/bisessarsailesh-web" data-linktext="Bekijk GitHub →">
+          <div class="contact-icon"><img src="img/contact/github.png" alt="GitHub"></div>
+          <div>
+            <div class="contact-label">GitHub</div>
+            <div class="contact-value">github.com/bisessarsailesh-web</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <div class="section-eyebrow form-eyebrow-spacing">Stuur een bericht</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Naam</label>
+            <input type="text" id="f-name" placeholder="Jouw naam">
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="f-email" placeholder="jouw@email.com">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Onderwerp</label>
+          <input type="text" id="f-subject" placeholder="Waar gaat het over?">
+        </div>
+        <div class="form-group">
+          <label>Bericht</label>
+          <textarea id="f-msg" rows="5" placeholder="Vertel me over jouw project..."></textarea>
+        </div>
+        <button class="btn btn-primary form-submit-btn" id="send-form-btn">Verstuur Bericht ✉️</button>
+        <div class="form-success" id="form-success">✅ Bericht verzonden! Ik neem snel contact met je op.</div>
+      </div>
+    </div>
+
+    <div class="contact-photo">
+      <img src="img/contact/profile-contact.jpg" alt="Bisessar Sailesh, full-stack web developer, aan zijn bureau">
+    </div>
+  </div>
+</section>
+
+<!-- Contact Modal -->
+<div id="contact-modal">
+  <div class="modal-box photo-modal-box">
+    <button class="modal-close js-close-contact-modal">✕</button>
+    <div class="photo-modal-img contact-modal-img"><img id="cm-img" src="" alt=""></div>
+    <div class="modal-title" id="cm-label"></div>
+    <div class="modal-desc" id="cm-value"></div>
+    <div class="modal-btns">
+      <a class="btn btn-primary" id="cm-link" href="#" target="_blank" rel="noopener">Ga naar →</a>
+      <button class="btn btn-outline js-close-contact-modal">Sluiten</button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div>Created by Sailesh Bisessar</div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>

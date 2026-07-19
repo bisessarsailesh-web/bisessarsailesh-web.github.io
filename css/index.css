@@ -1,0 +1,307 @@
+/* ── HOME — zwarte achtergrond ── */
+html, body { background: #000000; }
+
+#home {
+  display: flex;
+  flex-direction: column; align-items: center; justify-content: center;
+  min-height: 100vh; padding: 6rem 2rem 4rem;
+  text-align: center;
+  background: #000000;
+}
+
+.home-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+.home-text { flex: 1 1 50%; text-align: left; }
+.home-text .cta-row,
+.home-text .skills-strip { justify-content: flex-start; }
+.home-photo {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media(max-width:900px){
+  .home-layout { flex-direction: column; text-align:center; }
+  .home-text { text-align:center; }
+  .home-text .cta-row,
+  .home-text .skills-strip { justify-content: center; }
+  .home-photo { justify-content:center; }
+}
+
+/* AI Intro Overlay */
+#ai-overlay {
+  position: fixed; inset:0; z-index:999;
+  background: #000000;
+  padding: 0;
+}
+.ai-intro-layout {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  height: 100vh;
+  max-width: none;
+  margin: 0;
+  gap: 0;
+}
+.ai-intro-left {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  padding: 2rem 4rem;
+}
+.ai-intro-right {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  perspective: 1200px;
+}
+.ai-avatar-ring {
+  width:100%; height:100%;
+  display:flex; align-items:center; justify-content:center;
+  position:relative;
+  animation: float-3d 5s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+@keyframes float-3d {
+  0%,100% { transform: rotateY(-10deg) rotateX(3deg) translateY(0); }
+  50%     { transform: rotateY(6deg) rotateX(-2deg) translateY(-18px); }
+}
+.ai-avatar-face {
+  width:100%; height:100%;
+  font-size: 3.5rem;
+  user-select:none;
+  display:flex; align-items:center; justify-content:center;
+}
+.ai-avatar-face img {
+  filter:
+    drop-shadow(0 0 60px var(--accent-glow))
+    drop-shadow(0 25px 15px rgba(0,0,0,.6))
+    drop-shadow(12px 0 0 rgba(79,195,247,.15))
+    drop-shadow(-12px 0 0 rgba(124,58,237,.15));
+}
+.sound-wave {
+  display:flex; align-items:center; gap:4px; height:40px;
+}
+.wave-bar {
+  width:4px; border-radius:2px; background:var(--accent);
+  animation: wave var(--d) ease-in-out infinite alternate;
+  box-shadow: 0 0 6px var(--accent);
+}
+@keyframes wave { from{height:6px} to{height:var(--h)} }
+#ai-text {
+  font-family:'Space Grotesk',sans-serif; font-weight:500;
+  font-size: clamp(1.6rem,2.4vw,2.1rem);
+  background: linear-gradient(135deg, var(--accent) 20%, var(--accent2) 80%);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  background-clip:text;
+  max-width:560px; line-height:1.55;
+  min-height:180px;
+  letter-spacing:.01em;
+}
+.cursor-blink { animation: blink .7s step-end infinite; -webkit-text-fill-color: var(--accent2); }
+@keyframes blink {50%{opacity:0}}
+#skip-btn {
+  margin-top:.5rem; font-size:1rem; font-weight:600; color:var(--accent);
+  background:rgba(124,58,237,.08); border:1.5px solid var(--accent2);
+  padding:.8rem 2.2rem; border-radius:999px; cursor:pointer;
+  transition:all .25s; letter-spacing:.03em;
+}
+#skip-btn:hover{ color:#fff; background:var(--accent2); border-color:var(--accent2); box-shadow:0 0 30px var(--accent-glow); transform:translateY(-2px); }
+
+@media(max-width:900px){
+  .ai-intro-layout { flex-direction: column-reverse; text-align:center; height:auto; min-height:100vh; }
+  .ai-intro-left { flex:none; width:100%; align-items:center; text-align:center; padding:2rem; }
+  .ai-intro-right { flex:none; width:100%; height:45vh; }
+  .ai-avatar-face img { height:85% !important; max-width:70% !important; }
+}
+
+/* Profielfoto */
+.profile-photo-wrap {
+  width: 100%;
+  max-width: 640px;
+  flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  animation: float-photo 4.5s ease-in-out infinite;
+  cursor:pointer;
+  transition:transform .3s ease;
+}
+.profile-photo-wrap:hover { transform:scale(1.03); }
+.profile-photo-wrap img {
+  width:100%; height:auto; display:block; object-fit:contain;
+  filter:
+    drop-shadow(0 0 55px var(--accent-glow))
+    drop-shadow(0 30px 20px rgba(0,0,0,.55))
+    drop-shadow(10px 0 0 rgba(79,195,247,.12))
+    drop-shadow(-10px 0 0 rgba(124,58,237,.12));
+}
+@keyframes float-photo {
+  0%,100% { transform: translateY(0) rotate(-1deg); }
+  50%     { transform: translateY(-16px) rotate(1deg); }
+}
+
+@media(max-width:900px){
+  .profile-photo-wrap { max-width: 380px; }
+}
+@media(max-width:480px){
+  .profile-photo-wrap { max-width: 280px; }
+}
+
+.hero-name {
+  font-family:'Space Grotesk',sans-serif;
+  font-size: clamp(2.6rem,6vw,4.6rem); font-weight:700;
+  line-height:1.05; letter-spacing:-.02em;
+  background: linear-gradient(135deg, var(--accent) 15%, var(--accent2) 100%);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  margin-bottom:.8rem;
+}
+.hero-role {
+  font-family:'Space Grotesk',sans-serif;
+  font-size:1.5rem; color:var(--text-muted); margin-bottom:2rem;
+  font-weight:400; letter-spacing:.02em;
+}
+.hero-role span { color:var(--accent); font-weight:600; }
+
+.hero-intro {
+  font-family:'Space Grotesk',sans-serif;
+  font-size:1.55rem; color:#8fd3ff; margin-bottom:1.6rem;
+  max-width:640px; line-height:1.75; font-weight:400;
+  letter-spacing:.01em;
+}
+
+.home-skills-title {
+  font-family:'Space Grotesk',sans-serif;
+  font-size:1.7rem; font-weight:700; color:var(--accent2);
+  margin:1.5rem 0 1rem;
+}
+
+.cta-row { display:flex; gap:1rem; flex-wrap:wrap; justify-content:center; }
+
+/* ── Home summary sections (rol, ervaring, projecten, skills) ── */
+.home-summary { max-width:1320px; margin:0 auto; padding:5rem 2rem 2rem; }
+.home-summary + .home-summary { padding-top:1rem; }
+.home-section-eyebrow {
+  font-family:'Space Grotesk',sans-serif; font-size:.8rem; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--accent); font-weight:600; margin-bottom:.5rem;
+}
+.home-section-title {
+  font-family:'Space Grotesk',sans-serif; font-size:clamp(1.5rem,3vw,2.1rem);
+  font-weight:700; margin-bottom:2rem; letter-spacing:-.01em;
+}
+
+.summary-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.6rem; }
+.summary-card {
+  background: linear-gradient(145deg,#0d1b3e,#060912);
+  border:1px solid var(--border); border-radius:16px;
+  padding:1.8rem; transition:.3s; cursor:pointer;
+}
+.summary-card:hover { border-color:var(--accent); transform:translateY(-4px); box-shadow:0 0 30px rgba(79,195,247,.12); }
+.summary-card-icon {
+  width:100%; height:150px; margin-bottom:1rem;
+  border-radius:10px; overflow:hidden; background:#050a14;
+}
+.summary-card-icon img { width:100%; height:100%; object-fit:cover; display:block; transition:.4s; }
+.summary-card:hover .summary-card-icon img { transform:scale(1.06); }
+.summary-card .period {
+  display:inline-block; font-size:.72rem; font-weight:600; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--accent2); border:1px solid var(--accent2);
+  border-radius:999px; padding:.2rem .8rem; background:rgba(124,58,237,.08);
+  margin-bottom:.8rem;
+}
+.summary-card h3 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:700; margin-bottom:.3rem; }
+.summary-card .summary-company { font-size:.9rem; color:var(--accent); font-weight:600; margin-bottom:.7rem; }
+.summary-card p { font-size:.92rem; color:var(--text-muted); line-height:1.65; }
+.summary-card .card-link { margin-top:1rem; font-size:.88rem; position:relative; z-index:2; }
+
+.home-skills-grow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Klein-naar-groot "ademende" animatie: elke pill groeit rustig van klein
+   naar groot en weer terug, met een eigen vertraging zodat ze niet
+   allemaal tegelijk bewegen. Puur transform + animation, dus dit werkt
+   overal (Chrome, Edge, Firefox, Safari) zonder de eigenaardigheden van
+   offset-path. */
+.home-skills-grow .skill-pill {
+  cursor: pointer;
+  white-space: nowrap;
+  animation: skill-grow 3.6s ease-in-out infinite;
+}
+.home-skills-grow .skill-pill:hover {
+  animation-play-state: paused;
+}
+
+.home-skills-grow .skill-pill:nth-child(1)  { animation-delay: 0s;    }
+.home-skills-grow .skill-pill:nth-child(2)  { animation-delay: .3s;  }
+.home-skills-grow .skill-pill:nth-child(3)  { animation-delay: .6s;  }
+.home-skills-grow .skill-pill:nth-child(4)  { animation-delay: .9s;  }
+.home-skills-grow .skill-pill:nth-child(5)  { animation-delay: 1.2s; }
+.home-skills-grow .skill-pill:nth-child(6)  { animation-delay: 1.5s; }
+.home-skills-grow .skill-pill:nth-child(7)  { animation-delay: 1.8s; }
+.home-skills-grow .skill-pill:nth-child(8)  { animation-delay: 2.1s; }
+.home-skills-grow .skill-pill:nth-child(9)  { animation-delay: 2.4s; }
+.home-skills-grow .skill-pill:nth-child(10) { animation-delay: 2.7s; }
+
+@keyframes skill-grow {
+  0%, 100% { transform: scale(.85); }
+  50%      { transform: scale(1.15); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Nog steeds een klein beetje zichtbare beweging i.p.v. helemaal niets,
+     zodat het effect ook zichtbaar blijft op systemen met "animaties
+     verminderen" aan (een veelvoorkomende Windows/Edge-instelling). */
+  .home-skills-grow .skill-pill { animation-duration: 3.6s; }
+  @keyframes skill-grow {
+    0%, 100% { transform: scale(.97); }
+    50%      { transform: scale(1.03); }
+  }
+}
+
+/* Kleurdefinities voor .skill-color-1 t/m -10 en de bijbehorende
+   hover-fix staan gedeeld in main.css (zodat ze ook op de "Over mij"
+   pagina werken). Hier alleen nog de groei-animatie hierboven. */
+
+/* Info Modal (vakjes & vaardigheden op homepagina) */
+#info-modal {
+  display:none; position:fixed; inset:0; z-index:500;
+  background:rgba(0,0,0,.92); backdrop-filter:blur(10px);
+  align-items:center; justify-content:center; padding:1rem;
+}
+#info-modal.open { display:flex; }
+
+@media(max-width:900px){
+  .home-summary { text-align:center; }
+  .home-summary .summary-grid { text-align:left; }
+}
+
+.home-closing {
+  text-align:center;
+  padding-top:1rem;
+  padding-bottom:5rem;
+}
+.home-closing-text {
+  font-family:'Space Grotesk',sans-serif;
+  font-size:1.3rem; color:#8fd3ff; line-height:1.7;
+  max-width:820px; margin:0 auto; font-weight:400;
+  letter-spacing:.01em;
+}
